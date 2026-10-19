@@ -1,0 +1,5 @@
+model,passed,tasks,minutes,tool_calls,estimated_cost_cny,total_tokens,input_cache_hit_percent,cache_scope,tool_error_count
+DeepSeek V4.1 Flash,6,6,20.0834712000001070,312,2.73001408,13051616,98.26,valid_six_task_api_usage,5
+GPT-6.1 Sol,6,6,22.1846492756834774,113,10.26872452880,2358731,89.0,historical_platform_screenshot,20
+GLM 5.3,6,6,30.8807082569330924,221,5.3488684535560,5718247,97.4,historical_platform_screenshot,19
+Claude Opus 5.5,6,6,26.1441161534831429,93,29.01984674280,3145548,92.9,historical_platform_screenshot,1

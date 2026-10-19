@@ -1,0 +1,19 @@
+# Local-only materials and credentials must never enter the public history.
+.local-only/
+.env
+.env.*
+!.env.example
+**/credentials/
+**/auth.json
+**/.openai/
+**/node_modules/
+**/__pycache__/
+**/.DS_Store
+*.key
+*.pem
+*.docx
+*.zip
+*.tar
+*.gz
+archives/
+opencareer-benchmark/

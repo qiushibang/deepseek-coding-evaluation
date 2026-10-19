@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="从真实开源项目出发，一次四模型、六道题的 Coding Agent 评测。可播放、可暂停、可全屏录制的动态讲解。">
+  <title>真实项目，真实测评 · Coding Field Notes</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23b8e9ca'/%3E%3Cpath d='m16 12-8 8 8 8m8-16 8 8-8 8' fill='none' stroke='%23252a27' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="回到开场"><span class="brand-mark">{·}</span><span>FIELD NOTES<span class="brand-sub">一次真实的 Coding 评测</span></span></a>
+    <div class="top-actions"><span class="private-label"><i></i>录屏演示工作台</span><button id="data-button" class="quiet-button">测评数据 <span>↗</span></button><button id="help-button" class="icon-button" aria-label="快捷键与使用说明">?</button></div>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar">
+      <div class="sidebar-heading">讲解目录 <span>14 幕</span></div>
+      <nav id="chapters" aria-label="讲解章节"></nav>
+      <div class="sidebar-bottom"><span class="dot mint"></span>基于 OpenCareer 实测<span class="sidebar-caption">4 个模型 · 6 道题 · 24 次执行</span></div>
+    </aside>
+    <main class="studio">
+      <div class="studio-toolbar"><div class="scene-label"><span id="scene-number">01 / 14</span><i></i><span id="scene-label">先问一个问题</span></div><div class="format-controls" aria-label="画幅"><button data-aspect="wide" class="active" aria-pressed="true">16:9</button><button data-aspect="portrait" aria-pressed="false">9:16</button><button data-aspect="card" aria-pressed="false">3:4</button></div><button id="record-button" class="quiet-button">录屏模式 <kbd>H</kbd></button></div>
+      <div id="viewport" class="viewport">
+        <div id="frame" class="frame"><div id="stage" class="stage wide" aria-label="动态演示画面"><div id="scene-content"></div></div></div>
+        <button id="leave-record" aria-label="退出录屏模式">退出录屏 <kbd>H / Esc</kbd></button>
+      </div>
+      <section class="transport" aria-label="播放控制">
+        <div class="timeline-top"><span id="elapsed-label">00:00</span><label class="sr-only" for="timeline">演示播放进度</label><input id="timeline" type="range" min="0" max="1000" step="1" value="0"><span id="duration-label">03:40</span></div>
+        <div class="transport-row"><div class="transport-left"><button id="restart" class="icon-button" aria-label="从头播放" title="从头播放">↺</button><button id="previous" class="icon-button" aria-label="上一幕" title="上一幕（←）">←</button><button id="play" class="play-button" aria-label="开始播放"><span id="play-icon">▶</span><span id="play-label">开始播放</span></button><button id="next" class="icon-button" aria-label="下一幕" title="下一幕（→）">→</button><label class="speed-label" for="speed">速度</label><select id="speed" aria-label="播放速度"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></div><div class="transport-right"><button id="notes-button" class="quiet-button" aria-expanded="false">讲解提示 <span>⌄</span></button><button id="fullscreen" class="quiet-button">全屏 <kbd>F</kbd></button></div></div>
+      </section>
+      <section id="notes" class="notes" hidden><span>这一幕怎么讲</span><p id="note-text"></p></section>
+      <div class="studio-caption"><span>把任务交给模型，把判断交给证据。</span><span>空格 播放 / 暂停 · ← → 翻页</span></div>
+    </main>
+  </div>
+  <dialog id="data-dialog"><div class="dialog-heading"><div><span class="eyebrow">THE REAL NUMBERS</span><h2>四模型 · 六题实测</h2></div><button class="close-dialog icon-button" aria-label="关闭数据">×</button></div><div class="table-scroll"><table><caption class="sr-only">四模型六题结果汇总</caption><thead><tr><th>模型</th><th>通过</th><th>分钟</th><th>工具调用</th><th>估算费用 / 元</th><th>词元消耗</th><th>缓存命中率</th></tr></thead><tbody id="data-rows"></tbody></table></div><p class="data-footnote">数据来自本次有效六题记录。DeepSeek 为 V4.1 Flash；费用按约定单价估算，Flash 使用高峰价，非账户实扣。Flash 缓存率来自有效六题接口记录，其余来自平台截图，统计范围不同。不同题面版本、服务平台和单次运行也会影响比较。</p><p class="data-footnote">四者均按有效题面与验收标准通过 6/6。题面未规定的表示差异不扣分；测试问题独立校准，保留原始记录，不额外反馈修补答案。主评测未加入运行后新增要求。</p></dialog>
+  <dialog id="help-dialog"><div class="dialog-heading"><div><span class="eyebrow">READY TO RECORD</span><h2>你的讲解，你的节奏。</h2></div><button class="close-dialog icon-button" aria-label="关闭说明">×</button></div><p>先选画幅，点击“全屏”，再进入“录屏模式”，画面会只保留演示内容。用自己的录屏软件和麦克风录制即可；网站不录音、不采集摄像头。</p><div class="shortcut-grid"><span><kbd>Space</kbd>播放 / 暂停</span><span><kbd>← / →</kbd>上一幕 / 下一幕</span><span><kbd>F</kbd>切换全屏</span><span><kbd>H</kbd>录屏模式</span><span><kbd>Esc</kbd>退出录屏模式</span><span><kbd>Home</kbd>回到开场</span></div><p class="data-footnote">动画展示实验方法，不是实际模型执行录像。画面数据为历史实测，不会在线调用模型或产生接口费用。</p></dialog>
+  <div id="toast" role="status"></div>
+</body>
+</html>

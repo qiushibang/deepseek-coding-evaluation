@@ -1,0 +1,271 @@
+{
+  "scope": "Historical author-reported measurements, not a fresh rerun or independently reproducible benchmark.",
+  "primary_models": [
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "passed": 6,
+      "tasks": 6,
+      "minutes": "20.0834712000001070",
+      "tool_calls": 312,
+      "estimated_cost_cny": "2.73001408",
+      "total_tokens": 13051616,
+      "input_cache_hit_percent": 98.26,
+      "cache_scope": "valid_six_task_api_usage",
+      "tool_error_count": 5
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "passed": 6,
+      "tasks": 6,
+      "minutes": "22.1846492756834774",
+      "tool_calls": 113,
+      "estimated_cost_cny": "10.26872452880",
+      "total_tokens": 2358731,
+      "input_cache_hit_percent": 89.0,
+      "cache_scope": "historical_platform_screenshot",
+      "tool_error_count": 20
+    },
+    {
+      "model": "GLM 5.3",
+      "passed": 6,
+      "tasks": 6,
+      "minutes": "30.8807082569330924",
+      "tool_calls": 221,
+      "estimated_cost_cny": "5.3488684535560",
+      "total_tokens": 5718247,
+      "input_cache_hit_percent": 97.4,
+      "cache_scope": "historical_platform_screenshot",
+      "tool_error_count": 19
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "passed": 6,
+      "tasks": 6,
+      "minutes": "26.1441161534831429",
+      "tool_calls": 93,
+      "estimated_cost_cny": "29.01984674280",
+      "total_tokens": 3145548,
+      "input_cache_hit_percent": 92.9,
+      "cache_scope": "historical_platform_screenshot",
+      "tool_error_count": 1
+    }
+  ],
+  "task_results": [
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "task_id": "F1",
+      "result": "通过",
+      "minutes": "1.9784014159668004",
+      "tool_calls": 39,
+      "estimated_cost_cny": "0.226354",
+      "total_tokens": 770801
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "task_id": "F2",
+      "result": "通过",
+      "minutes": "5.534878920133633",
+      "tool_calls": 111,
+      "estimated_cost_cny": "0.80395792",
+      "total_tokens": 6165687
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "task_id": "F3",
+      "result": "通过",
+      "minutes": "3.63223898819997",
+      "tool_calls": 51,
+      "estimated_cost_cny": "0.50104536",
+      "total_tokens": 2002782
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "task_id": "B1",
+      "result": "通过",
+      "minutes": "1.2908309826331485",
+      "tool_calls": 33,
+      "estimated_cost_cny": "0.17210696",
+      "total_tokens": 505349
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "task_id": "B2",
+      "result": "通过",
+      "minutes": "4.5230914826500035",
+      "tool_calls": 46,
+      "estimated_cost_cny": "0.60691024",
+      "total_tokens": 2560243
+    },
+    {
+      "model": "DeepSeek V4.1 Flash",
+      "task_id": "B3",
+      "result": "通过",
+      "minutes": "3.1240294104165516",
+      "tool_calls": 32,
+      "estimated_cost_cny": "0.4196396",
+      "total_tokens": 1046754
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "task_id": "F1",
+      "result": "通过",
+      "minutes": "2.5025861986165787",
+      "tool_calls": 18,
+      "estimated_cost_cny": "1.19223048910",
+      "total_tokens": 295330
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "task_id": "F2",
+      "result": "通过",
+      "minutes": "5.6022270263834795",
+      "tool_calls": 21,
+      "estimated_cost_cny": "2.81679768100",
+      "total_tokens": 802636
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "task_id": "F3",
+      "result": "通过",
+      "minutes": "4.19543936596674",
+      "tool_calls": 18,
+      "estimated_cost_cny": "1.82204877510",
+      "total_tokens": 351369
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "task_id": "B1",
+      "result": "通过",
+      "minutes": "2.6921046673667055",
+      "tool_calls": 20,
+      "estimated_cost_cny": "1.51441867840",
+      "total_tokens": 394768
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "task_id": "B2",
+      "result": "通过",
+      "minutes": "3.538039905550007",
+      "tool_calls": 24,
+      "estimated_cost_cny": "1.59364858260",
+      "total_tokens": 343566
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "task_id": "B3",
+      "result": "通过",
+      "minutes": "3.6542521117999667",
+      "tool_calls": 12,
+      "estimated_cost_cny": "1.32958032260",
+      "total_tokens": 171062
+    },
+    {
+      "model": "GLM 5.3",
+      "task_id": "F1",
+      "result": "通过",
+      "minutes": "2.7569527763832107",
+      "tool_calls": 21,
+      "estimated_cost_cny": "0.3091535995420",
+      "total_tokens": 228616
+    },
+    {
+      "model": "GLM 5.3",
+      "task_id": "F2",
+      "result": "通过",
+      "minutes": "8.456636499999878",
+      "tool_calls": 74,
+      "estimated_cost_cny": "1.3838008955470",
+      "total_tokens": 2602607
+    },
+    {
+      "model": "GLM 5.3",
+      "task_id": "F3",
+      "result": "通过",
+      "minutes": "8.204697336116563",
+      "tool_calls": 28,
+      "estimated_cost_cny": "0.7630160265260",
+      "total_tokens": 639992
+    },
+    {
+      "model": "GLM 5.3",
+      "task_id": "B1",
+      "result": "通过",
+      "minutes": "1.097165450683436",
+      "tool_calls": 30,
+      "estimated_cost_cny": "0.2714963816530",
+      "total_tokens": 335558
+    },
+    {
+      "model": "GLM 5.3",
+      "task_id": "B2",
+      "result": "通过",
+      "minutes": "7.789632070833371",
+      "tool_calls": 39,
+      "estimated_cost_cny": "1.4698704235350",
+      "total_tokens": 1174670
+    },
+    {
+      "model": "GLM 5.3",
+      "task_id": "B3",
+      "result": "通过",
+      "minutes": "2.5756241229166337",
+      "tool_calls": 29,
+      "estimated_cost_cny": "1.1515311267530",
+      "total_tokens": 736804
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "task_id": "F1",
+      "result": "通过",
+      "minutes": "1.7878200555499157",
+      "tool_calls": 8,
+      "estimated_cost_cny": "2.05458437620",
+      "total_tokens": 122699
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "task_id": "F2",
+      "result": "通过",
+      "minutes": "7.382098035416615",
+      "tool_calls": 37,
+      "estimated_cost_cny": "9.38681060340",
+      "total_tokens": 1831100
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "task_id": "F3",
+      "result": "通过",
+      "minutes": "9.622183196533296",
+      "tool_calls": 18,
+      "estimated_cost_cny": "9.95687755420",
+      "total_tokens": 709038
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "task_id": "B1",
+      "result": "通过",
+      "minutes": "1.6487983729166444",
+      "tool_calls": 10,
+      "estimated_cost_cny": "1.78687490980",
+      "total_tokens": 143113
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "task_id": "B2",
+      "result": "通过",
+      "minutes": "2.3581425757001853",
+      "tool_calls": 9,
+      "estimated_cost_cny": "2.66912009880",
+      "total_tokens": 185053
+    },
+    {
+      "model": "Claude Opus 5.5",
+      "task_id": "B3",
+      "result": "通过",
+      "minutes": "3.3450739173664865",
+      "tool_calls": 11,
+      "estimated_cost_cny": "3.16557920040",
+      "total_tokens": 154545
+    }
+  ]
+}
